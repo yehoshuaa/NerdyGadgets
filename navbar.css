@@ -51,3 +51,6 @@ nav ul li a:hover {
     color: #7DF9FF;
 }
 
+.logo-img{
+    display: inline-block;
+}
