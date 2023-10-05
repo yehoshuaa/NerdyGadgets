@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- product slide -->
+  <section class="ProductSlider">
+
+<!-- heading -->
+<h3 class="P-slider-heading">Product Slider</h3>
+
+
+<div class="glider-contain">
+  <div class="glider">
+
+<!-- product box -->
+<div class="ProductBox">
+
+  <div class="ProductImage">
+    <div class="P-Image">
+      <a href="#">
+        <img src="http://via.placeholder.com/220x220" class="P-Image1" >
+      </a>
+
+    </div>
+<!-- image text -->
+    <div class="ProductImageText">
+      <div class="ProductCategory">
+        <span>Product</span>
+      
+      </div>
+<!-- The product -->
+      <a href="#" class="ProductTitle">
+        ThinkPad_T14s Gen_2 (Intel)
+      </a>
+      
+<!-- The price -->
+      <div class="PriceBuy">
+       <span class="ProductPrice">$899</span>
+       <a href="#" class="buy-btn" >Buy Now</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- second product box -->
+<div class="ProductBox">
+
+  <div class="ProductImage">
+    <div class="P-Image">
+      <a href="#">
+        <img src="http://via.placeholder.com/220x220" class="P-Image1" >
+      </a>
+
+    </div>
+<!-- image text -->
+    <div class="ProductImageText">
+      <div class="ProductCategory">
+        <span>Product</span>
+      
+      </div>
+<!-- The product -->
+      <a href="#" class="ProductTitle">
+        ThinkPad_T14s Gen_2 (Intel)
+      </a>
+      
+<!-- The price -->
+      <div class="PriceBuy">
+       <span class="ProductPrice">$899</span>
+       <a href="#" class="buy-btn" >Buy Now</a>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+<!-- third product box -->
+<div class="ProductBox">
+
+  <div class="ProductImage">
+    <div class="P-Image">
+      <a href="#">
+        <img src="http://via.placeholder.com/220x220" class="P-Image1" >
+      </a>
+
+    </div>
+<!-- image text -->
+    <div class="ProductImageText">
+      <div class="ProductCategory">
+        <span>Product</span>
+      
+      </div>
+<!-- The product -->
+      <a href="#" class="ProductTitle">
+        ThinkPad_T14s Gen_2 (Intel)
+      </a>
+      
+<!-- The price -->
+      <div class="PriceBuy">
+       <span class="ProductPrice">$899</span>
+       <a href="#" class="buy-btn" >Buy Now</a>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+  </div>
+
+  <button aria-label="Previous" class="glider-prev">«</button>
+  <button aria-label="Next" class="glider-next">»</button>
+  <div role="tablist" class="dots"></div>
+</div>
+
+
+  </section>
+
+  <script src="glider.js"></script>
+
+<script>
+  new Glider(document.querySelector('.glider'), {
+  slidesToShow: 3,
+  dots: '#dots',
+  arrows: {
+    prev: '.glider-prev',
+    next: '.glider-next'
+  }
+});
+</script>
+
+</body>
+
+</html>
