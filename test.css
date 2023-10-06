@@ -13,7 +13,7 @@ li,a, button{
     font-family: Montserrat;
     font-weight: 500;
     font-size: 16px;
-    color: antiquewhite;
+    color: #fffdfd;
     text-decoration: none;
 }
 
@@ -22,7 +22,7 @@ header{
     justify-content: flex-end;
     align-items: center;
     padding: 1px 10%;
-    background-color: #2a323b;
+    background-color: #7f91a2;
 }
 
 .logo{
@@ -30,6 +30,7 @@ header{
     height: 100px;
     width: 200px;
     margin-right: auto;
+    border: 50px;
 }
 
 
@@ -64,4 +65,47 @@ button:hover{
     background-color: rgba(0,136,169,0.8);
 }
 
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
 
+.searchTerm {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: #000000;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.searchButton {
+    width: 40px;
+    height: 20px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    color: #fff;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+    display: flex;
+    align-items: flex-start;
+
+
+}
