@@ -28,6 +28,9 @@
     margin-bottom: 10px;
 
 }
+.col-3 a{
+    display: flex;
+}
 .footer div h3{
     display: flex;
     font-weight: 300;
