@@ -1,0 +1,56 @@
+/* Styles for the search bar container */
+.search-container {
+    text-align: center;
+    padding: 10px;
+    background-color: #2c75ff;
+}
+
+/* Style for the input field */
+.search-container input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style for the search button */
+.search-container button[type="submit"] {
+    padding: 8px 12px;
+    background-color: #7DF9FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style for the navigation menu (navbar) */
+nav {
+    background-color: #2c75ff;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #7DF9FF;
+}
+
+.logo-img{
+    display: inline-block;
+}
