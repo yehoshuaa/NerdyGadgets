@@ -13,13 +13,21 @@
 </head>
 <body>
     <header>
-        <img style="background-color: white; border-radius: 100px" class="logo" src="images/logo.png" alt="logo">
+        <img style="background-color: white; border-radius: 100px" class="logo" src="https://cdn.discordapp.com/attachments/1153666965139894324/1163753201762324530/yalloooo.png?ex=6540b8a0&is=652e43a0&hm=341ef536f5ef415bf4e36f391d4e8212398d3143e611b8af6b22c1169b66f21c&" alt="logo">
+        <form class="form">
+            <div class="invoer-groep">
+                <input type="text" class="input">
+                <label class="Zoekbalk">Zoeken</label>
 
+            </div>
+        </form>
 
+<!--
         <div class="search-container">
             <input style="height: 40px;width: 20rem" type="text" class="input" placeholder="Zoeken...">
             <input type="image" src= "images/search.png" height="15px" width="15px" alt="submit">
-        </div>
+        </div> -->
+
         <nav class="navbar">
             <ul class="nav_links">
                 <li><a href="#"></a></li>
@@ -85,6 +93,7 @@
             <a href="#">Voorwaarden</a>
             <a href="#">Blog</a>
 
+
         </div>
         <div class="col-2">
             <h3>Categorieën</h3>
@@ -94,7 +103,11 @@
             <a href="#">Sale</a>
             <a href="#">Telefonie</a>
             <a href="#">Navigatie</a>
+            <br>
+            <br>
+            <a href="#">vandaag voor 17:00 besteld, morgen in huis!</a>
         </div>
+
         <div class="col-3">
             <h3 style="color: white" >Contact</h3>
             <p style="color: white" > Nerdy Gadgets</p>
@@ -106,6 +119,7 @@
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-behance"></i>
+
             </div>
 
             <div class="test">
@@ -114,6 +128,16 @@
 
 
             </div>
+            <div class="bezorgtijd">
+                <p style="color: white" align="left"> Voor 17:00 besteld, morgen in huis!</p>
+
+                </div>
+
+     <div class="img">
+                <img src="https://www.glas-in-lood-online.nl/wp-content/uploads/2019/02/Betaalmogelijkheden-glas-in-lood-online.png" alt="Betaalmogelijkheden">
+
+            </div>
+
 
 
 
