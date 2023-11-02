@@ -26,9 +26,9 @@
 <!--    </div>-->
 <!--    <nav class="navbar">-->
 <!--        <ul class="nav_links">-->
-<!--            <li><a href="#"></a></li>-->
-<!--            <li><a href="#"></a></li>-->
-<!--            <li><i class="fa-regular fa-user"></i><a href="#"> Account</a> </li>-->
+<!--            <li><a href=productdetails.php"></a></li>-->
+<!--            <li><a href=productdetails.php"></a></li>-->
+<!--            <li><i class="fa-regular fa-user"></i><a href=productdetails.php"> Account</a> </li>-->
 <!--        </ul>-->
 <!--    </nav>-->
 <!---->
@@ -46,7 +46,7 @@
                 <img src="images/nerdygadgetslogo.png" width="229px" height="166.05" alt="NerdyGadgets logo" />
             </a>
             <div class="flex items-center lg:order-2">
-                <a href="#" class="text-gray-800 text-white hover:bg-gray-500 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none">Log in</a>
+                <a href="productdetails.php" class="text-gray-800 text-white hover:bg-gray-500 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none">Log in</a>
                 <i class="cursor-pointer py-3 px-3 bg-white rounded-lg fa-solid fa-cart-shopping"></i>
 
                 <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false">
@@ -58,22 +58,22 @@
             <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                 <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                     <li>
-                        <a href="#" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0" aria-current="page">Home</a>
+                        <a href="productdetails.php" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Company</a>
+                        <a href="productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Company</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Marketplace</a>
+                        <a href="productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Marketplace</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Features</a>
+                        <a href="productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Features</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Team</a>
+                        <a href="productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Team</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Contact</a>
+                        <a href="productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Contact</a>
                     </li>
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -118,8 +118,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -132,14 +132,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -154,8 +154,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -168,14 +168,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -190,8 +190,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -204,14 +204,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -226,8 +226,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -240,14 +240,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -262,8 +262,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -276,14 +276,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -301,8 +301,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -315,14 +315,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -337,8 +337,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -351,14 +351,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -373,8 +373,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -387,14 +387,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -409,8 +409,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -423,14 +423,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -445,8 +445,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -459,14 +459,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -484,8 +484,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -498,14 +498,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -520,8 +520,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -534,14 +534,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -556,8 +556,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -570,14 +570,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -592,8 +592,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -606,14 +606,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -628,8 +628,8 @@
                 <!-- Product Image -->
                 <div class="p-img-container">
                     <div class="p-img">
-                        <a href="#">
-                            <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <a href="productdetails.php">
+                            <img src="https://placehold.co/220x220" alt="Front">
                         </a>
                     </div>
                 </div>
@@ -642,14 +642,14 @@
                         <span>Laptop</span>
                     </div>
                     <!-- Title -->
-                    <a href="#" class="product-title">
+                    <a href="productdetails.php" class="product-title">
                         ThinkPad_T14s Gen_2 (Intel)
                     </a>
 
                     <!-- price -->
                     <div class="price-buy">
                         <span class="p-price">1200$</span>
-                        <a href="#" class="p-buy-btn">Buy Now</a>
+                        <a href="productdetails.php" class="p-buy-btn">Buy Now</a>
                     </div>
 
                 </div>
@@ -673,6 +673,23 @@
 
 </section>
 
+<div>
+    <div class="relative bg-cover bg-center h-32 md:h-64 my-10" style="background-image: url('images/retrobanner.png');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-white">
+            <div class="max-w-md mx-auto text-center">
+                <div class="text-3xl md:text-4xl font-bold leading-tight">
+                    "Geweldige klantenservice en de gadgets zijn super nerdy!"
+                </div>
+                <div class="text-xl mt-4">
+                    ★★★★★
+                </div>
+                <div class="text-lg mt-2">- Joop</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Footer -->
 
 <footer class="bg-[#4666ff]">
@@ -682,16 +699,16 @@
                 <h2 class="mb-6 text-sm font-semibold text-white uppercase">Company</h2>
                 <ul class="text-white font-medium">
                     <li class="mb-4">
-                        <a href="#" class=" hover:underline">About</a>
+                        <a href="productdetails.php" class=" hover:underline">About</a>
                     </li>
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Careers</a>
+                        <a href="productdetails.php" class="hover:underline">Careers</a>
                     </li>
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Brand Center</a>
+                        <a href="productdetails.php" class="hover:underline">Brand Center</a>
                     </li>
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Blog</a>
+                        <a href="productdetails.php" class="hover:underline">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -699,16 +716,16 @@
                 <h2 class="mb-6 text-sm font-semibold text-white uppercase ">Help center</h2>
                 <ul class="text-white font-medium">
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Discord Server</a>
+                        <a href="productdetails.php" class="hover:underline">Discord Server</a>
                     </li>
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Twitter</a>
+                        <a href="productdetails.php" class="hover:underline">Twitter</a>
                     </li>
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Facebook</a>
+                        <a href="productdetails.php" class="hover:underline">Facebook</a>
                     </li>
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Contact Us</a>
+                        <a href="productdetails.php" class="hover:underline">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -716,13 +733,13 @@
                 <h2 class="mb-6 text-sm font-semibold text-white uppercase">Legal</h2>
                 <ul class="text-white font-medium">
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Privacy Policy</a>
+                        <a href="productdetails.php" class="hover:underline">Privacy Policy</a>
                     </li>
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Licensing</a>
+                        <a href="productdetails.php" class="hover:underline">Licensing</a>
                     </li>
                     <li class="mb-4">
-                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                        <a href="productdetails.php" class="hover:underline">Terms &amp; Conditions</a>
                     </li>
                 </ul>
             </div>
