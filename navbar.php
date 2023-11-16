@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="css/test.css">
     <script src="https://kit.fontawesome.com/d8635543be.js" crossorigin="anonymous"></script>
 
     <title>NerdyGadgets</title>
 </head>
 <body>
     <header>
-        <img class="logo"  src="logo.png" alt="logo">
+        <img class="logo" src="images/logo.png" alt="logo">
 
         <div class="wrap">
             <div class="search">
