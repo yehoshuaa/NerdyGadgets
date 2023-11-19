@@ -1,0 +1,152 @@
+.search-container {
+    margin: auto;
+    background-color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    border-radius: 5px;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1px 10%;
+    background-color: steelblue;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Occupy full width */
+}
+
+.menu-btn {
+  flex: 1; /* Stretch buttons to occupy available space */
+  background-color: steelblue;
+  color: white;
+  border: white;
+  padding: 8px 16px;
+  
+  cursor: pointer;
+  /* border-radius: 5px; */
+  transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #3570a0;
+}
+
+/* producten */
+.ProductSection {
+    display: flex;
+    flex-wrap: wrap;
+   padding-inline: 400px; 
+   justify-content: space-evenly; 
+  }
+
+.productbox{
+    float: left;
+    margin-top: 50px;
+    position: relative;
+    border: 3px solid rgba(0,0,0,0.08);
+    border-radius: 10px;
+}
+
+.productbox .description {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Position it to the right of the productbox */
+    transform: translateX(10px); /* Add space between productbox and description */
+    width: 200px; /* Adjust width as needed */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 1; /* Ensure the description appears above other elements */
+  }
+  
+  .productbox:hover .description {
+    display: block;
+  }
+
+  .product-title{
+    color: #313131;
+    font-weight:600;
+    text-decoration: none;
+  }
+
+  .product-title:hover{
+    color: black;
+    opacity: 0.7;
+    transition: all ease 0.3s;
+   }
+
+   .price-buy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    text-decoration: none;
+   }
+
+   .price-buy .p-price{
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 700;
+   }
+
+
+
+  /*footer*/
+
+  .footer{
+    margin-top: 100px;
+    width: 100%;
+    padding: 100px 10%;
+    background: black;
+    color: #efefef;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer div{
+    text-align: center;
+}
+
+.col-2 a{
+
+    display: flex;
+    text-decoration: aqua;
+    color: #efefef;
+    margin-bottom: 10px;
+
+}
+.col-3 a{
+    display: flex;
+    text-decoration: aqua;
+    color: #efefef;
+    margin-bottom: 10px;
+
+}
+.footer div h3{
+    display: flex;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.col-1 a{
+    display: flex;
+    text-decoration: aqua;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+
+.test {
+    line-height: 200px;
+}
