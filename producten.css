@@ -1,3 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+}
+
 .search-container {
     margin: auto;
     background-color: white;
@@ -104,7 +111,7 @@ header{
   /*footer*/
 
   .footer{
-    margin-top: 100px;
+    margin-top: 400px;
     width: 100%;
     padding: 100px 10%;
     background: black;
@@ -113,40 +120,35 @@ header{
     justify-content: space-between;
 
 }
-
 .footer div{
-    text-align: center;
+  text-align: center;
 }
 
 .col-2 a{
 
-    display: flex;
-    text-decoration: aqua;
-    color: #efefef;
-    margin-bottom: 10px;
+  display: flex;
+  text-decoration: aqua;
+  color: #efefef;
+  margin-bottom: 11px;
 
 }
 .col-3 a{
-    display: flex;
-    text-decoration: aqua;
-    color: #efefef;
-    margin-bottom: 10px;
-
+  display: flex;
 }
 .footer div h3{
-    display: flex;
-    font-weight: 300;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
+  display: flex;
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 .col-1 a{
-    display: flex;
-    text-decoration: aqua;
-    color: #efefef;
-    margin-bottom: 10px;
+  display: flex;
+  text-decoration: aqua;
+  color: #efefef;
+  margin-bottom: 10px;
 }
 
 
 .test {
-    line-height: 200px;
+line-height: 200px;
 }
