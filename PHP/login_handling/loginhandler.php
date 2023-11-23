@@ -45,10 +45,13 @@ if ($_POST['type'] === 'login'){
     while ($row = mysqli_fetch_assoc($emailCheck)) {
         $data[] = $row;
     }
-
+    $prefix = 'none';
+    if (isset($_POST['prefix'])){
+        $prefix = $_POST['prefix'];
+    }
 
     if ($data === []){
-        $conn->query("INSERT INTO user VALUES (2000 ,{$email}, {$password}, 'woord', 'woord1', 'woord2', 33, 'woord4', 'woord5')");
+        $conn->query("INSERT INTO user (email, password, first_name, surname_prefix, surname, street_name, apartment_nr, postal_code, city)VALUES ('{$email}', '{$password}', '{$_POST['first_name']}', '{$prefix}', '{$_POST['surname']}', '{$_POST['street']}', '{$_POST['housenr']}', '{$_POST['postalcode']}', '{$_POST['city']}')");
         header('Location: http://nerdygadgets.com/PHP/login_handling/login.php');
 
     }else{
