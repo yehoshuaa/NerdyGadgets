@@ -11,11 +11,7 @@ $all_product = $conn->query($sql);
 <link rel="stylesheet" href="producten.css">
 </head>
 <body>
-  <?php
-while($row = mysqli_fetch_assoc($all_product)){
-?>
-    <!-- header aka menubar -->
-    <header>
+<header>
         <img style="background-color: white; border-radius: 100px" class="logo" src="images/logo.png" alt="logo">
 
 
@@ -41,6 +37,12 @@ while($row = mysqli_fetch_assoc($all_product)){
       <button class="menu-btn" data-category="display">Accessories</button>
     </nav>
 
+  <?php
+while($row = mysqli_fetch_assoc($all_product)){
+?>
+    <!-- header aka menubar -->
+    
+
    <!-- producten -->
       <section class="ProductSection">
 
@@ -61,34 +63,23 @@ while($row = mysqli_fetch_assoc($all_product)){
 
 <!-- product category -->
   <div class="product-category">
-    <span>Laptop</span>
+    <span><?php echo $row["category"]?></span>
   </div>
   <!-- Title -->
   <a href="#" class="product-title">
-    loserPad_1 (AMD)
+   <?php echo $row["name"]?>
   </a>
   <!-- price -->
   <div class="price-buy">
-    <span class="p-price">1200$</span>
+    <span class="p-price"><?php echo $row["price"]?></span>
     <a href="#" class="p-buy-btn">Buy Now</a>
   </div>
     <!-- Description -->
     <div class="description">
-      Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <?php echo $row["description"]?>
     </div>
  </div>
 </div>
-
-
-
-
-<!-- ===============another row============ -->
-
-
-
-<!-- ===============another row============ -->
-
-
 <?php
 };
 ?>
