@@ -28,18 +28,16 @@
   .menu-bar {
     display: flex;
     align-items: center;
-    width: 100%; /* Occupy full width */
+    width: 100%; 
   }
   
   .menu-btn {
-    flex: 1; /* Stretch buttons to occupy available space */
+    flex: 1; 
     background-color: steelblue;
     color: white;
     border: white;
     padding: 8px 16px;
-    
     cursor: pointer;
-    /* border-radius: 5px; */
     transition: background-color 0.3s ease;
   }
   
@@ -51,12 +49,12 @@
   .ProductSection {
       display: flex;
       flex-wrap: wrap;
-     padding-inline: 400px; 
+     
      justify-content: space-evenly; 
     }
   
   .productbox{
-      float: left;
+      
       margin-top: 50px;
       position: relative;
       border: 3px solid rgba(0,0,0,0.08);
@@ -67,15 +65,13 @@
       display: none;
       position: absolute;
       top: 0;
-      left: 100%; /* Position it to the right of the productbox */
-      transform: translateX(10px); /* Add space between productbox and description */
-      width: 200px; /* Adjust width as needed */
+      left: 100%; 
+      width: 200px; 
       background-color: #f0f0f0;
       padding: 10px;
       border: 1px solid #ccc;
-      z-index: 1; /* Ensure the description appears above other elements */
-    }
-    
+      z-index: 1; 
+  }
     .productbox:hover .description {
       display: block;
     }
@@ -87,7 +83,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      max-width: 5%; /* Adjust the width as per your requirement */
+      max-width: 5%; 
     }
   
     .product-title:hover{
@@ -109,9 +105,6 @@
       color: black;
       font-weight: 700;
      }
-  
-  
-  
   
   
     /*footer*/
@@ -153,8 +146,33 @@
     color: #efefef;
     margin-bottom: 10px;
   }
-  
-  
   .test {
   line-height: 200px;
   }
+
+  /* CSS for the sliding menu */
+  .slide-menu {
+  position: fixed;
+  top: 0;
+   left: -400px; /* Start off-screen */
+   width: 400px;
+  height: 100%;
+  background-color: #f4f4f4;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  }
+
+ .slide-btn {
+ position: fixed;
+ top: 20px;
+ left: 20px;
+ z-index: 1100;
+ padding: 10px 20px;
+ background-color: #333;
+ color: #fff;
+ border: none;
+ cursor: pointer;
+ font-size: 16px;
+ }
