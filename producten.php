@@ -1,5 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="producten.css">
+</head>
+<!-- Makes the connection to the database and pulls the data from it -->
 <?php
-require_once 'connection.php';
+require 'connection.php';
 
 $sql = "Select * FROM product";
 $sqlProduct = "Select DISTINCT category FROM product";
@@ -10,12 +16,8 @@ $all_product = $conn->query($sql);
 $all_price = $conn ->query($sqlPrice);
 
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="producten.css">
-</head>
 <body>
+
 <header>
         <img style="background-color: white; border-radius: 100px" class="logo" src="images/logo.png" alt="logo">
 

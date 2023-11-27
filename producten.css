@@ -49,12 +49,10 @@
   .ProductSection {
       display: flex;
       flex-wrap: wrap;
-     
-     justify-content: space-evenly; 
+    
     }
   
   .productbox{
-      
       margin-top: 50px;
       position: relative;
       border: 3px solid rgba(0,0,0,0.08);
