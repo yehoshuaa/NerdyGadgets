@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="producten.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <!-- Makes the connection to the database and pulls the data from it -->
 <?php
@@ -10,76 +11,81 @@ require 'connection.php';
 $sql = "Select * FROM product";
 $sqlProduct = "Select DISTINCT category FROM product";
 $sqlPrice = "Select price FROM product";
+$sqlImage ="select image From product";
 
 $all_category= $conn->query($sqlProduct);
 $all_product = $conn->query($sql);
 $all_price = $conn ->query($sqlPrice);
-
+$all_image = $conn ->query($sqlImage);
 ?>
 <body>
 
 <header>
+
+        <i style="background-color: white;padding: 10px 15px;border-radius: 10px"  class="fa-solid fa-cart-shopping"></i>
         <img style="background-color: white; border-radius: 100px" class="logo" src="images/logo.png" alt="logo">
-
-
         <div class="search-container">
             <input id="searchInput" style="height: 40px;width: 20rem" type="text" class="input" placeholder="Zoeken...">
             <input type="image" src= "images/search.png" height="15px" width="15px" alt="submit">
         </div>
-
         <button id="slideBtn" class="slide-btn">Slide Menu</button>
+
+
         <div id="menu" class="slide-menu">
-    <?php 
-    while ($options = mysqli_fetch_assoc($all_category)) {
-        echo '<label><input type="checkbox" class="category-filter" name="category[]" value="' . $options['category'] . '"><span class="category-label">' . $options['category'] . '</span></label><br>';
-    }
-    ?>
+         <?php 
+            while ($options = mysqli_fetch_assoc($all_category)) {
+            echo '<label><input type="checkbox" class="category-filter" name="category[]" value="' . $options['category'] . '"><span class="category-label">' . $options['category'] . '</span></label><br>';
+            }
+            ?>
+           <button id="sort-highest-btn">Sort by Highest Price</button>
+           <button id="sort-lowest-btn">Sort by Lowest Price</button>
 
-<button id="sort-highest-btn">Sort by Highest Price</button>
-<button id="sort-lowest-btn">Sort by Lowest Price</button>
-
-    </div>
-
-        <nav class="navbar">
+           <div id="price-slider"></div>
+           <p>
+             Min Price: <span id="minPrice"></span>
+             Max Price: <span id="maxPrice"></span>
+            </p>
+        </div>
+            <nav class="navbar">
             <ul class="nav_links">
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><i class="fa-regular fa-user"></i><a href="#"> Account</a> </li>  
-        </nav>
-
-      <i style="background-color: white;padding: 10px 15px;border-radius: 10px"  class="fa-solid fa-cart-shopping"></i>
-
-      
-    </header>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><i class="fa-regular fa-user"></i><a href="#"> Account</a> </li>  
+            </nav>
+        </header>
 
 
-    <?php
-while ($row = mysqli_fetch_assoc($all_product)) {
-    ?>
-    <!-- header aka menubar -->
-    <!-- producten -->
+    
     <section class="ProductSection">
+    <?php
+    $count = 0;
+    echo '<div class="productRow">'; 
+    while ($row = mysqli_fetch_assoc($all_product)) {
+        if ($count > 0 && $count % 4 == 0) {
+            echo '</div>'; 
+            echo '<div class="productRow">'; 
+        }
+        ?>
         <!-- product box -->
         <div class="productbox <?php echo $row['category']; ?>">
             <!-- Product Image -->
             <div class="p-img-container">
                 <div class="p-img">
                     <a href="#">
-                        <img src="http://via.placeholder.com/220x220" alt="Front">
+                        <img src="product_images/<?php echo $row['image']?>.jpg" alt="Front">
                     </a>
                 </div>
             </div>
 
             <!-- product text -->
             <div class="p-box-text">
-
                 <!-- product category -->
                 <div class="product-category">
                     <span><?php echo $row["category"] ?></span>
                 </div>
                 <!-- Title -->
                 <a href="#" class="product-title">
-                <?php echo strlen($row["name"]) > 22 ? substr($row["name"], 0, 22) . '...' : $row["name"]; ?>
+                    <?php echo strlen($row["name"]) > 22 ? substr($row["name"], 0, 22) . '...' : $row["name"]; ?>
                 </a>
                 <!-- price -->
                 <div class="price-buy">
@@ -88,13 +94,15 @@ while ($row = mysqli_fetch_assoc($all_product)) {
                 </div>
                 <!-- Description -->
                 <div class="description">
-                <?php echo strlen($row["description"]) > 300 ? substr($row["description"], 0, 300) . '...' : $row["description"]; ?>
+                    <?php echo strlen($row["description"]) > 300 ? substr($row["description"], 0, 300) . '...' : $row["description"]; ?>
                 </div>
             </div>
         </div>
-    <?php
-}
-?>
+        <?php
+        $count++;
+    }
+    echo '</div>'; 
+    ?>
 </section>
 
 <!-- footer -->
@@ -136,8 +144,7 @@ while ($row = mysqli_fetch_assoc($all_product)) {
       </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script>
 // filter op category
 $(document).ready(function() {
@@ -252,9 +259,53 @@ $(document).ready(function() {
     // Call filterSearch function when search input changes
     $('#searchInput').on('input', filterSearch);
     
-    // ... Rest of your existing JavaScript code ...
-
 });
 
+
+// Price slider
+$(document).ready(function() {
+    var products = $('.productbox');
+
+    // Get min and max prices
+    var minPrice = parseFloat($('.p-price').first().text());
+    var maxPrice = parseFloat($('.p-price').first().text());
+    $('.p-price').each(function() {
+      var price = parseFloat($(this).text());
+      if (price < minPrice) {
+        minPrice = price;
+      }
+      if (price > maxPrice) {
+        maxPrice = price;
+      }
+    });
+
+    // Initialize price slider
+    $('#price-slider').slider({
+      range: true,
+      min: minPrice,
+      max: maxPrice,
+      values: [minPrice, maxPrice],
+      slide: function(event, ui) {
+        $('#minPrice').text(ui.values[0]);
+        $('#maxPrice').text(ui.values[1]);
+
+        // Filter products based on the price range
+        var min = ui.values[0];
+        var max = ui.values[1];
+        products.each(function() {
+          var price = parseFloat($(this).find('.p-price').text());
+          if (price >= min && price <= max) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+      }
+    });
+
+    // Set initial price values
+    $('#minPrice').text(minPrice);
+    $('#maxPrice').text(maxPrice);
+  });
 </script>
 </html>
