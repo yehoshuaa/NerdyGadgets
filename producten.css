@@ -76,7 +76,8 @@
   .p-img {
     width: 150px;
     height: 150px;
-    margin-right: 10px; /* Add margin between image and text */
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .p-img img {

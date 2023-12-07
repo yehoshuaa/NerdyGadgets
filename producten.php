@@ -320,9 +320,8 @@ $(document).ready(function() {
 
 // searchbar functie
 $(document).ready(function() {
-    // Function to filter products based on search input
     function filterSearch() {
-        var searchTerm = $('#searchInput').val().toLowerCase();
+        var searchTerm = $('#default-search').val().toLowerCase(); 
         var products = $('.productbox');
 
         products.each(function() {
@@ -334,10 +333,7 @@ $(document).ready(function() {
             }
         });
     }
-
-    // Call filterSearch function when search input changes
-    $('#searchInput').on('input', filterSearch);
-    
+    $('#default-search').on('input', filterSearch); 
 });
 
 
