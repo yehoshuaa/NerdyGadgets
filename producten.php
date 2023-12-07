@@ -23,7 +23,7 @@ $all_image = $conn ->query($sqlImage);
 
 <header>
 
-<nav class="bg-[#36454f] border-gray-200 px-4 lg:px-6 py-2.5">
+<nav class="bg-[#36454f] border-gray-200 px-4 lg:px-6 py-2.5" style="z-index: -1;">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <a href="/index.php" class="flex items-center">
                 <img src="../images/nerdygadgetslogo.png" width="229px" height="166.05" alt="NerdyGadgets logo" />
@@ -75,8 +75,9 @@ $all_image = $conn ->query($sqlImage);
         </div>
     </nav>
 
-    <button id="slideBtn" class="slide-btn">Slide Menu</button>
-        <div id="menu" class="slide-menu">
+   
+<div class="sidebar">
+        <div id="sidemenu" class="side-menu">
          <?php 
             while ($options = mysqli_fetch_assoc($all_category)) {
             echo '<label><input type="checkbox" class="category-filter" name="category[]" value="' . $options['category'] . '"><span class="category-label">' . $options['category'] . '</span></label><br>';
@@ -91,90 +92,135 @@ $all_image = $conn ->query($sqlImage);
              Max Price: <span id="maxPrice"></span>
             </p>
         </div>
-
-       
- 
-        </header>
-
+</div>
 
     
-    <section class="ProductSection">
     <?php
     while ($row = mysqli_fetch_assoc($all_product)) {
         ?>
+        <div class="ProductSection">
         <!-- product box -->
         <div class="productbox <?php echo $row['category']; ?>">
-            <!-- Product Image -->
-            <div class="p-img-container">
+            <div class="product-content">
+                <!-- Product Image -->
                 <div class="p-img">
                     <a href="#">
                         <img src="product_images/<?php echo $row['image']?>.jpg" alt="Front">
                     </a>
                 </div>
-            </div>
-
-            <!-- product text -->
-            <div class="p-box-text">
-                <!-- product category -->
-                <div class="product-category">
-                    <span><?php echo $row["category"] ?></span>
-                </div>
-                <!-- Title -->
-                <a href="#" class="product-title">
-                    <?php echo strlen($row["name"]) > 22 ? substr($row["name"], 0, 22) . '...' : $row["name"]; ?>
-                </a>
-                <!-- price -->
-                <div class="price-buy">
-                    <span class="p-price"><?php echo $row["price"] ?></span>
-                    <a href="#" class="p-buy-btn">Buy Now</a>
-                </div>
-                <!-- Description -->
-                <div class="description">
-                    <?php echo strlen($row["description"]) > 300 ? substr($row["description"], 0, 300) . '...' : $row["description"]; ?>
+                <!-- product text -->
+                <div class="p-box-text">
+                    <!-- product category -->
+                    <div class="product-category">
+                        <span><?php echo $row["category"] ?></span>
+                    </div>
+                    <!-- Title -->
+                    <a href="#" class="product-title">
+                        <?php echo strlen($row["name"]) > 30 ? substr($row["name"], 0, 30) . '...' : $row["name"]; ?>
+                    </a>
+                    <!-- price -->
+                    <div class="price-buy">
+                        <span class="p-price"><?php echo $row["price"] ?></span>
+                        <div class="button-container">
+                           <a href="#" class="p-buy-btn">Buy Now</a>
+                         </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="description">
+                        <?php echo strlen($row["description"]) > 320 ? substr($row["description"], 0, 320) . '...' : $row["description"]; ?>
+                    </div>
                 </div>
             </div>
         </div>
         <?php } ?>
-</section>
+    </div>
+
 
 <!-- footer -->
-<div class="footer">
-  <div class="col-1">
-      <h3> Informatie</h3>
-      <a href="#">Home</a>
-      <a href="#">Over ons</a>
-      <a href="#">Contact</a>
-      <a href="#">Retourneren</a>
-      <a href="#">Voorwaarden</a>
-      <a href="#">Blog</a>
+<footer class="bg-[#4666ff]" style="width: 100%;">
+    <div class="mx-auto w-full max-w-screen-xl">
+        <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase">Company</h2>
+                <ul class="text-white font-medium">
+                    <li class="mb-4">
+                        <a href="#" class=" hover:underline">About</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Careers</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Brand Center</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase ">Help center</h2>
+                <ul class="text-white font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Discord Server</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Twitter</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Facebook</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase">Legal</h2>
+                <ul class="text-white font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Licensing</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase">Contact</h2>
 
-  </div>
-  <div class="col-2">
-      <h3>Catergorieen</h3>
-      <a href="#">Beeld & Geluid</a>
-      <a href="#">Kabels</a>
-      <a href="#">Losse artikelen</a>
-      <a href="#">Sale</a>
-      <a href="#">Telefonie</a>
-      <a href="#">Navigatie</a>
-  </div>
-  <div class="col-3">
-      <h3 align="right">Contact</h3>
-      <p align="right"> Nerdy Gadgets</p>
-      <p align="right">Hospitaaldreef 5</p>
-      <p align="right">1312 RC Almere</p>
-      <div class="social-icons">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-behance"></i>
-          <!-- <p alligun="right"> © Nerdy Gadgets 2023</p> -->
+                <p class="text-white text-center -ml-52"><b>NerdyGadgets B.V.</b><br>
+                    Hospitaaldreef 5<br>
+                    1312 RC Almere
+                </p>
 
-      </div>
-      <div class="test">
-          <p align="right"> © Nerdy Gadgets 2023</p>
-      </div>
-</body>
+
+
+            </div>
+        </div>
+        <hr>
+        <div class="px-4 py-6  md:flex md:items-center md:justify-between">
+        <span class="text-sm text-white sm:text-center">© 2023 <a href="https://flowbite.com/">NerdyGadgets</a>.
+        </span>
+            <p class="text-white font-normal text-center">Voor 17:00 besteld morgen in huis!</p>
+            <div class="flex mt-4 inline space-x-5 list-none  sm:justify-center md:mt-0">
+
+
+
+                <li><i class="fab fa-cc-visa text-2xl text-white"></i></li>
+                <li><i class="fab fa-cc-mastercard text-2xl text-white"></i></li>
+                <li><i class="fab fa-cc-paypal text-2xl text-white"></i></li>
+                <li><i class="fab fa-cc-amex text-2xl text-white"></i></li>
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script>
