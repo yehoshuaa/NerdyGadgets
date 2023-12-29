@@ -40,22 +40,22 @@
             <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                 <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                     <li>
-                        <a href="../productdetails.php" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0" aria-current="page">Home</a>
+                        <a href="../productdetails/productdetails.php" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="../productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Company</a>
+                        <a href="../productdetails/productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Company</a>
                     </li>
                     <li>
-                        <a href="../productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Marketplace</a>
+                        <a href="../productdetails/productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Marketplace</a>
                     </li>
                     <li>
-                        <a href="../productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Features</a>
+                        <a href="../productdetails/productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Features</a>
                     </li>
                     <li>
-                        <a href="../productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Team</a>
+                        <a href="../productdetails/productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Team</a>
                     </li>
                     <li>
-                        <a href="../productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Contact</a>
+                        <a href="../productdetails/productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Contact</a>
                     </li>
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -115,16 +115,16 @@
                 <h2 class="mb-6 text-sm font-semibold text-white uppercase">Company</h2>
                 <ul class="text-white font-medium">
                     <li class="mb-4">
-                        <a href="../productdetails.php" class=" hover:underline">About</a>
+                        <a href="../productdetails/productdetails.php" class=" hover:underline">About</a>
                     </li>
                     <li class="mb-4">
-                        <a href="../productdetails.php" class="hover:underline">Careers</a>
+                        <a href="../productdetails/productdetails.php" class="hover:underline">Careers</a>
                     </li>
                     <li class="mb-4">
-                        <a href="../productdetails.php" class="hover:underline">Brand Center</a>
+                        <a href="../productdetails/productdetails.php" class="hover:underline">Brand Center</a>
                     </li>
                     <li class="mb-4">
-                        <a href="../productdetails.php" class="hover:underline">Blog</a>
+                        <a href="../productdetails/productdetails.php" class="hover:underline">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -132,16 +132,16 @@
                 <h2 class="mb-6 text-sm font-semibold text-white uppercase ">Help center</h2>
                 <ul class="text-white font-medium">
                     <li class="mb-4">
-                        <a href="../productdetails.php" class="hover:underline">Discord Server</a>
+                        <a href="../productdetails/productdetails.php" class="hover:underline">Discord Server</a>
                     </li>
                     <li class="mb-4">
-                        <a href="../productdetails.php" class="hover:underline">Twitter</a>
+                        <a href="../productdetails/productdetails.php" class="hover:underline">Twitter</a>
                     </li>
                     <li class="mb-4">
-                        <a href="../productdetails.php" class="hover:underline">Facebook</a>
+                        <a href="../productdetails/productdetails.php" class="hover:underline">Facebook</a>
                     </li>
                     <li class="mb-4">
-                        <a href="../productdetails.php" class="hover:underline">Contact Us</a>
+                        <a href="../productdetails/productdetails.php" class="hover:underline">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -149,13 +149,13 @@
                 <h2 class="mb-6 text-sm font-semibold text-white uppercase">Legal</h2>
                 <ul class="text-white font-medium">
                     <li class="mb-4">
-                        <a href="../productdetails.php" class="hover:underline">Privacy Policy</a>
+                        <a href="../productdetails/productdetails.php" class="hover:underline">Privacy Policy</a>
                     </li>
                     <li class="mb-4">
-                        <a href="../productdetails.php" class="hover:underline">Licensing</a>
+                        <a href="../productdetails/productdetails.php" class="hover:underline">Licensing</a>
                     </li>
                     <li class="mb-4">
-                        <a href="../productdetails.php" class="hover:underline">Terms &amp; Conditions</a>
+                        <a href="../productdetails/productdetails.php" class="hover:underline">Terms &amp; Conditions</a>
                     </li>
                 </ul>
             </div>

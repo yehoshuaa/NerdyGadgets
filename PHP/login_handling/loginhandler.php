@@ -7,14 +7,14 @@ $password = $_POST['password'];
 
 
 // Create connection
-$conn = new mysqli('localhost', 'root', '');
+$conn = new mysqli('localhost', 'root', '', 'nerdy_gadgets_start');
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$conn->query("USE nerdy_gadgets_start");
+//$conn->query("USE nerdy_gadgets_start");
 
 if ($_POST['type'] === 'login'){
 //Login logic

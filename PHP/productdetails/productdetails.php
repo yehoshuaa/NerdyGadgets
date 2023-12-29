@@ -1,5 +1,25 @@
 <?php
-session_start()?>
+session_start();
+
+// Create connection
+$conn = new mysqli('localhost', 'root', '', 'nerdy_gadgets_start');
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$productId = $_GET['id'];
+
+$result = null;
+if (mysqli_fetch_assoc($conn->query("SELECT * FROM product WHERE id = '{$productId}'"))){
+    $result = mysqli_fetch_assoc($conn->query("SELECT * FROM product WHERE id = '{$productId}'"));
+    $image = $result['image'];
+}else{
+    echo 'Product niet gevonden';
+    exit();
+};
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +27,8 @@ session_start()?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/index.css">
-    <link rel="stylesheet" href="../CSS/productdt.css">
+    <link rel="stylesheet" href="../../CSS/index.css">
+    <link rel="stylesheet" href="../../CSS/productdt.css">
     <script src="https://kit.fontawesome.com/2a92e0944c.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d8635543be.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com/3.3.5"></script>
@@ -20,7 +40,7 @@ session_start()?>
     <nav class="bg-[#36454f] border-gray-200 px-4 lg:px-6 py-2.5">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <a href="/index.php" class="flex items-center">
-                <img src="../images/nerdygadgetslogo.png" width="229px" height="166.05" alt="NerdyGadgets logo" />
+                <img src="../../images/nerdygadgetslogo.png" width="229px" height="166.05" alt="NerdyGadgets logo" />
             </a>
             <div class="flex items-center lg:order-2">
                 <?php if (!isset($_SESSION['id'])){?>
@@ -72,47 +92,58 @@ session_start()?>
 <!--End header-->
 <div class="wrapper">
 
-    <div class="slider-container">
-        <div class="image-gallery">
-            <img src="../images/laptop1.jpg" alt="Image 1">
-            <img src="../images/laptop2.jpg" alt="Image 2">
-            <img src="../images/laptop3.jpg" alt="Image 3">
-            <!-- Add more images as needed -->
-        </div>
-        <div class="main-image-container">
-            <div class="nav-buttons">
-                <button id="prevButton" onclick="prevImage()">&#10094;</button>
-                <button id="nextButton" onclick="nextImage()">&#10095;</button>
-            </div>
-            <img src="../images/laptop1.jpg" alt="Main Image" class="main-image" id="mainImage">
-        </div>
+    <div id="imageContainer" class="relative h-64 w-full max-w-1/4">
+        <img
+                class="absolute top-0 left-0 w-full h-full object-contain"
+                src="../../product_images/<?php echo $image;?>.jpg"
+                alt="Your Image Alt Text"
+                id="image"
+        />
     </div>
 
-    <div class="prdctdesc">
-        <h3 class="font-bold">Leuke laptop</h3>
+<!--    Resizes the product image to fit the imagecontainer-->
+    <script>
+        const imageContainer = document.getElementById('imageContainer');
+        const image = document.getElementById('image');
+
+        // Set the desired width
+        const desiredWidth = 1200;
+
+        // Calculate the required height to maintain the aspect ratio
+        const aspectRatio = image.width / image.height;
+        const desiredHeight = Math.round(desiredWidth / aspectRatio);
+
+        // Apply the height to the container
+        imageContainer.style.height = `${desiredHeight}px`;
+    </script>
+
+    <div class="w-3/4">
+        <h3 class="font-bold"><?php echo $result['name']?></h3>
 
         <form>
 
-            <div>
-                <label>Kies je kleur:</label>
-                <select class="select h-10 w-24" name="languages" id="lang">
-                    <option value="Rood">Rood</option>
-                    <option value="Blauw">Blauw</option>
-                    <option value="Geel">Geel</option>
-                </select>
+            <input hidden name="id" value="<?php echo $productId;?>">
+
+            <div class="mt-4">
+                <label>Aantal:</label>
+                <input type="number" name="amount" value="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-1/4 p-2.5">
             </div>
+
 
             <hr style="margin-top: 5%;margin-bottom: 5%">
 
-            <button class="add-to-cart-button">
+            <button onclick="<?php
+            if (!isset($_SESSION['cart'][$productId]) && isset($_GET['amount'])){
+                $_SESSION['cart'][$productId] = $_GET['amount'];
+            }
+            ?>" class="add-to-cart-button">
                 <span class="cart-icon"></span>
                 Toevoegen aan winkelwagen
             </button>
+
         </form>
 
     </div>
-
-
 
 
 </div>
@@ -123,9 +154,7 @@ session_start()?>
         <br>
         <p style="font-weight: normal">
 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum libero vitae nibh faucibus suscipit eu imperdiet justo. Vivamus posuere tellus metus, eu fermentum turpis gravida in. Nunc lacinia odio et egestas porttitor. Integer nisi purus, posuere vitae faucibus in, posuere quis quam. Maecenas dapibus eros at commodo aliquam. Integer nec nunc lobortis, lacinia ipsum at, luctus est. Etiam auctor quis metus feugiat rutrum.
-            <br><br>
-            Sed semper tortor neque, at feugiat leo luctus non. Nulla ut pharetra mi. Nam at libero porttitor, condimentum arcu a, mollis eros. Quisque fringilla non ante non cursus. Pellentesque et mattis ipsum, nec placerat enim. Nulla ultrices turpis eget leo suscipit mattis. Morbi pharetra feugiat massa et porta. Duis finibus vehicula sapien at vulputate. Morbi sagittis aliquet aliquet. In id porta mi, at dictum nibh. Maecenas efficitur sollicitudin lacus ac vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas a vestibulum leo.
+            <?php echo str_replace('"', '',$result['description']);?>
 
         </p>
     </div>
@@ -138,19 +167,19 @@ session_start()?>
         <div class="recommended">
 
 
-            <div class="p-3" style="box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);"><img class="rec-img" src="../images/laptop1.jpg">
+            <div class="p-3" style="box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);"><img class="rec-img" src="../../product_images/gVJY2kP9wWvl.jpg">
                 <h4>Productnaam</h4>
                     <b style="float: right">$500,-</b>
             </div>
-            <div class="p-3" style="box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);"><img class="rec-img" src="../images/laptop1.jpg">
+            <div class="p-3" style="box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);"><img class="rec-img" src="../../product_images/J1V42Jmq7xOg.jpg">
                 <h4>Productnaam</h4>
                 <b style="float: right">$500,-</b>
             </div>
-            <div class="p-3" style="box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);"><img class="rec-img" src="../images/laptop1.jpg">
+            <div class="p-3" style="box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);"><img class="rec-img" src="../../product_images/J13NW3yoozmy.jpg">
                 <h4>Productnaam</h4>
                 <b style="float: right">$500,-</b>
             </div>
-            <div class="p-3" style="box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);"><img class="rec-img" src="../images/laptop1.jpg">
+            <div class="p-3" style="box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);"><img class="rec-img" src="../../product_images/j84KpqMW4Rlv.jpg">
                 <h4>Productnaam</h4>
                 <b style="float: right">$500,-</b>
             </div>
