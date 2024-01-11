@@ -138,7 +138,7 @@
                         <a href="../productdetails/productdetails.php" class="hover:underline">Twitter</a>
                     </li>
                     <li class="mb-4">
-                        <a href="../productdetails/productdetails.php" class="hover:underline">Facebook</a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ?si=-cwfb1cj22BDMmTx" class="hover:underline">Facebook</a>
                     </li>
                     <li class="mb-4">
                         <a href="../productdetails/productdetails.php" class="hover:underline">Contact Us</a>
@@ -180,10 +180,11 @@
 
 
 
-                <li><i class="fab fa-cc-visa text-2xl text-white"></i></li>
-                <li><i class="fab fa-cc-mastercard text-2xl text-white"></i></li>
-                <li><i class="fab fa-cc-paypal text-2xl text-white"></i></li>
-                <li><i class="fab fa-cc-amex text-2xl text-white"></i></li>
+                <li><button onclick="sound()"><i class="fab fa-cc-visa text-2xl text-white"></i></button></li>
+                <li><button onclick="sound()"><i class="fab fa-cc-mastercard text-2xl text-white"></button></i></li>
+                <li><button onclick="sound()"><i class="fab fa-cc-paypal text-2xl text-white"></i></button></li>
+                <li><button onclick="sound()"><i class="fab fa-cc-amex text-2xl text-white"></i></button></li>
+
 
 
             </div>
@@ -192,6 +193,11 @@
 </footer>
 
 </body>
-
+<script>
+    function sound(){
+        var snd = new Audio('EasterEgg_Files/Cash_sound.mp3')//wav is also supported
+        snd.play()//plays the sound
+    }
+</script>
 
 </html>

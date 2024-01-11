@@ -1,8 +1,13 @@
 <?php
 session_start();
+
+if (date("h-i") === '00-01'){
+    echo "<div class='flex justify-center'><img class='absolute mt-42' src='EasterEgg_Files/slaaptijd.png'></div>";
+}
 //$_SESSION['cart'] = [];
 //var_dump($_SESSION['cart']);
 ?>
+<script>console.log("");</script>
 <!doctype html>
 <html lang="en">
 <head>
@@ -56,15 +61,17 @@ session_start();
                 <?php }else{?>
                     <i class="cursor-pointer py-3 px-3.5 mr-3 rounded-lg text-white fa-regular fa-user hover:text-black hover:bg-white"></i>
                 <?php }?>
-                <i class="cursor-pointer py-3 px-3 bg-white rounded-lg fa-solid fa-cart-shopping hover:bg-gray-600 hover:text-white"></i>
 
+                <a href="PHP/shoppingcart/shoppingCart.php">
+                    <i class="cursor-pointer py-3 px-3 bg-white rounded-lg fa-solid fa-cart-shopping hover:bg-gray-600 hover:text-white"></i>
+                </a>
                 <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
                     <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </button>
             </div>
-            <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+            <div class="hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                 <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                     <li>
                         <a href="PHP/productdetails/productdetails.php" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0" aria-current="page">Home</a>
@@ -72,31 +79,25 @@ session_start();
                     <li>
                         <a href="PHP/catalog/producten.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Catalogus</a>
                     </li>
-                    <li>
-                        <a href="PHP/productdetails/productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Marketplace</a>
-                    </li>
-                    <li>
-                        <a href="PHP/productdetails/productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Features</a>
-                    </li>
-                    <li>
-                        <a href="PHP/productdetails/productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Team</a>
-                    </li>
-                    <li>
-                        <a href="PHP/productdetails/productdetails.php" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Contact</a>
-                    </li>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                            </svg>
-                        </div>
-                        <input type="search" id="default-search" class="h-5 p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Search Mockups, Logos..." required>
-                    </div>
+
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+<button class="hover:bg-white" onclick="nerdyToggle();console.log('1/3 Geheime knoppen gevonden!')" style="padding: 10px;"></button>
+
+<div class="absolute hidden" id="nerdy">
+    <img src="EasterEgg_Files/nerdy_glasses.png">
+</div>
+<script>
+
+    function nerdyToggle() {
+        var x = document.getElementById("nerdy");
+        x.classList.toggle("hidden");
+    }
+
+</script>
 
 <!-- Hero -->
 <div class="m-10 p-5 mx-auto bg-image rounded-3" style="
@@ -106,7 +107,7 @@ session_start();
   ">
 </div>
 <!-- Hero -->
-
+<button onclick="console.log('2/3 Geheime knoppen gevonden!')" class="float-right hover:bg-white p-4"></button>
 <!-- product slider -->
 <section class="p-slider">
 
@@ -698,7 +699,7 @@ session_start();
         </div>
     </div>
 </div>
-
+<button onclick="console.log('3/3 Geheime knoppen gevonden!!!!!')" class="float-right hover:bg-white p-4"></button>
 <!-- Footer -->
 
 <footer class="bg-[#4666ff]">
@@ -731,7 +732,7 @@ session_start();
                         <a href="PHP/productdetails/productdetails.php" class="hover:underline">Twitter</a>
                     </li>
                     <li class="mb-4">
-                        <a href="PHP/productdetails/productdetails.php" class="hover:underline">Facebook</a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ?si=-cwfb1cj22BDMmTx" class="hover:underline">Facebook</a>
                     </li>
                     <li class="mb-4">
                         <a href="PHP/productdetails/productdetails.php" class="hover:underline">Contact Us</a>
@@ -773,10 +774,10 @@ session_start();
 
 
 
-                    <li><i class="fab fa-cc-visa text-2xl text-white"></i></li>
-                    <li><i class="fab fa-cc-mastercard text-2xl text-white"></i></li>
-                    <li><i class="fab fa-cc-paypal text-2xl text-white"></i></li>
-                    <li><i class="fab fa-cc-amex text-2xl text-white"></i></li>
+                    <li><button onclick="sound()"><i class="fab fa-cc-visa text-2xl text-white"></i></button></li>
+                    <li><button onclick="sound()"><i class="fab fa-cc-mastercard text-2xl text-white"></button></i></li>
+                    <li><button onclick="sound()"><i class="fab fa-cc-paypal text-2xl text-white"></i></button></li>
+                    <li><button onclick="sound()"><i class="fab fa-cc-amex text-2xl text-white"></i></button></li>
 
 
             </div>
@@ -801,6 +802,12 @@ session_start();
                     next: '.glider-next'
                 }
             });
+
+            function sound(){
+                var snd = new Audio('EasterEgg_Files/Cash_sound.mp3')//wav is also supported
+                snd.play()//plays the sound
+            }
+
         </script>
 
 </body>
