@@ -18,17 +18,22 @@ if ($conn->connect_error) {
 
 if ($_POST['type'] === 'login'){
 //Login logic
-    $result = $conn->query("SELECT id FROM user WHERE email = '{$email}' AND password = '{$password}';");
 
-    $data = array();
-    while ($row = mysqli_fetch_assoc($result)) {
-        $data[] = $row;
-    }
+    //Reset vars
+    $result = [];
+    $id = null;
 
+    //Prepared statements to prevent SQL injection
+    $stmt =  $conn->prepare("SELECT id FROM user WHERE email = ? AND password = ?;");
+    $stmt->bind_param("ss", $email, $password);
+    $stmt->execute();
+    $stmt->bind_result($id);
+    $stmt->fetch();
+    $result = [$id];
 
-    if ($data != []){
+    if ($result != []){
         session_start();
-        $_SESSION['id'] = $data[0]['id'];
+        $_SESSION['id'] = $result[0];
         echo $_SESSION['id'];
         header('Location: http://nerdygadgets.com/index.php');
     }else{
